@@ -9,6 +9,7 @@ import Newsletter from '@/components/Newsletter';
 import Footer from '@/components/Footer';
 import { experiences } from '@/lib/data';
 import ExperienceCard from '@/components/ExperienceCard';
+import { cn } from '@/lib/utils';
 
 const Index = () => {
   // Smooth scroll for anchor links
@@ -55,11 +56,14 @@ const Index = () => {
             
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
               {featuredExperiences.map((experience, index) => (
-                <ExperienceCard 
-                  key={experience.id} 
-                  experience={experience} 
-                  featured={index === 0}
-                />
+                <div key={experience.id} className={cn(
+                  index === 0 && "md:col-span-2"
+                )}>
+                  <ExperienceCard 
+                    experience={experience} 
+                    featured={index === 0}
+                  />
+                </div>
               ))}
             </div>
           </div>

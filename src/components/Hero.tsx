@@ -4,6 +4,7 @@ import { Button } from '@/components/ui/button';
 import { useInView } from '@/lib/animations';
 import { ArrowRight } from 'lucide-react';
 import { cn } from '@/lib/utils';
+import { Link } from 'react-router-dom';
 
 const Hero = () => {
   const [ref, isInView] = useInView<HTMLDivElement>({ threshold: 0.3 });
@@ -89,15 +90,17 @@ const Hero = () => {
             </p>
             
             <div className="flex flex-col sm:flex-row space-y-4 sm:space-y-0 sm:space-x-4">
-              <Button 
-                size="lg" 
-                className="group relative overflow-hidden bg-white text-black hover:bg-white/90 text-base transition-all px-8"
-              >
-                Explore Experiences
-                <div className="absolute right-4 group-hover:translate-x-1 transition-transform">
-                  <ArrowRight className="h-5 w-5" />
-                </div>
-              </Button>
+              <Link to="/#experiences">
+                <Button 
+                  size="lg" 
+                  className="group relative overflow-hidden bg-white text-black hover:bg-white/90 text-base transition-all px-8"
+                >
+                  Explore Experiences
+                  <div className="absolute right-4 group-hover:translate-x-1 transition-transform">
+                    <ArrowRight className="h-5 w-5" />
+                  </div>
+                </Button>
+              </Link>
               <Button 
                 size="lg" 
                 variant="outline" 

@@ -39,7 +39,7 @@ const TrendingSection = () => {
             </p>
           </div>
           
-          <Link to="/category/cat1">
+          <Link to="/experiences">
             <Button 
               variant="ghost" 
               className={cn(
