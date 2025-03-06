@@ -2,7 +2,7 @@
 import { useEffect, useState, useRef } from 'react';
 import { Button } from '@/components/ui/button';
 import { useInView } from '@/lib/animations';
-import { ArrowRight, Gift } from 'lucide-react';
+import { ArrowRight } from 'lucide-react';
 import { cn } from '@/lib/utils';
 
 const Hero = () => {
@@ -69,7 +69,11 @@ const Hero = () => {
             )}
           >
             <div className="inline-flex items-center space-x-2 bg-white/10 backdrop-blur-sm px-4 py-2 rounded-full mb-6">
-              <Gift className="h-4 w-4" />
+              <img 
+                src="/lovable-uploads/5c4b2b72-9668-4671-9be9-84c7371c459a.png" 
+                alt="Slash logo" 
+                className="h-4 w-4" 
+              />
               <span className="text-sm font-medium">Curated Experience Gifts</span>
             </div>
             

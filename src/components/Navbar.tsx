@@ -1,6 +1,6 @@
 
 import { useState, useEffect } from 'react';
-import { Menu, X, Search, ShoppingCart, Gift } from 'lucide-react';
+import { Menu, X, Search, ShoppingCart } from 'lucide-react';
 import { Button } from '@/components/ui/button';
 import { Input } from '@/components/ui/input';
 import { cn } from '@/lib/utils';
@@ -38,9 +38,13 @@ const Navbar = () => {
       <div className="max-w-7xl mx-auto flex items-center justify-between">
         {/* Logo */}
         <a href="/" className="flex items-center space-x-2 z-10">
-          <Gift className={cn("h-6 w-6 transition-colors", isScrolled ? "text-primary" : "text-white")} />
+          <img 
+            src="/lovable-uploads/5c4b2b72-9668-4671-9be9-84c7371c459a.png" 
+            alt="Slash logo" 
+            className={cn("h-8 w-8 transition-colors")} 
+          />
           <span className={cn("font-medium text-xl transition-colors", isScrolled ? "text-primary" : "text-white")}>
-            Memento
+            Slash
           </span>
         </a>
 

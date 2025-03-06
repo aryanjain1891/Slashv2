@@ -1,13 +1,11 @@
-
 import { useState } from 'react';
 import { useInView } from '@/lib/animations';
 import { Button } from '@/components/ui/button';
 import { 
-  Separator,
-  SeparatorProps 
+  Separator
 } from '@/components/ui/separator';
 import { cn } from '@/lib/utils';
-import { Gift, Instagram, Facebook, Twitter, Linkedin, Youtube } from 'lucide-react';
+import { Slash, Instagram, Facebook, Twitter, Linkedin, Youtube } from 'lucide-react';
 
 const Footer = () => {
   const [ref, isInView] = useInView<HTMLDivElement>({ threshold: 0.1 });
@@ -63,8 +61,12 @@ const Footer = () => {
           {/* Logo and About */}
           <div className="lg:col-span-2">
             <a href="/" className="flex items-center space-x-2 mb-6">
-              <Gift className="h-6 w-6" />
-              <span className="font-medium text-xl">Memento</span>
+              <img 
+                src="/lovable-uploads/5c4b2b72-9668-4671-9be9-84c7371c459a.png" 
+                alt="Slash logo" 
+                className="h-8 w-8" 
+              />
+              <span className="font-medium text-xl">Slash</span>
             </a>
             <p className="text-muted-foreground mb-6 max-w-md">
               Curated experience gifts that create lasting memories. We believe in the power of experiences over material possessions.
@@ -107,7 +109,7 @@ const Footer = () => {
         
         <div className="flex flex-col md:flex-row md:items-center justify-between text-sm text-muted-foreground">
           <div className="mb-4 md:mb-0">
-            &copy; {new Date().getFullYear()} Memento. All rights reserved.
+            &copy; {new Date().getFullYear()} Slash. All rights reserved.
           </div>
           <div className="flex flex-wrap gap-4">
             <a href="#" className="hover:text-foreground transition-colors">Privacy Policy</a>
