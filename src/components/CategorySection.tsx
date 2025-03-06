@@ -1,5 +1,6 @@
 
 import { useState } from 'react';
+import { Link } from 'react-router-dom';
 import { categories } from '@/lib/data';
 import { useInView } from '@/lib/animations';
 import { cn } from '@/lib/utils';
@@ -42,8 +43,9 @@ const CategorySection = () => {
           )}
         >
           {categories.map((category, index) => (
-            <div 
+            <Link 
               key={category.id}
+              to={`/category/${category.id}`}
               className="group relative overflow-hidden rounded-xl cursor-pointer hover-lift"
               onMouseEnter={() => setHoveredCategory(category.id)}
               onMouseLeave={() => setHoveredCategory(null)}
@@ -87,7 +89,7 @@ const CategorySection = () => {
                   <ChevronRight className="h-4 w-4 ml-1" />
                 </div>
               </div>
-            </div>
+            </Link>
           ))}
         </div>
       </div>

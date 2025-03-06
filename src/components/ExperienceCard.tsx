@@ -1,5 +1,6 @@
 
 import { useRef, useState } from 'react';
+import { Link } from 'react-router-dom';
 import { Experience } from '@/lib/data';
 import { Button } from '@/components/ui/button';
 import { cn } from '@/lib/utils';
@@ -102,9 +103,11 @@ const ExperienceCard = ({ experience, featured = false }: ExperienceCardProps) =
               "transition-all duration-300 transform",
               isHovered ? "opacity-100 translate-y-0" : "opacity-0 translate-y-4"
             )}>
-              <Button size="sm" className="w-full bg-white text-black hover:bg-white/90">
-                View Experience
-              </Button>
+              <Link to={`/experience/${experience.id}`}>
+                <Button size="sm" className="w-full bg-white text-black hover:bg-white/90">
+                  View Experience
+                </Button>
+              </Link>
             </div>
           </div>
         </div>

@@ -1,5 +1,6 @@
 
 import { useState } from 'react';
+import { Link } from 'react-router-dom';
 import { experiences } from '@/lib/data';
 import { useInView } from '@/lib/animations';
 import ExperienceCard from './ExperienceCard';
@@ -38,16 +39,18 @@ const TrendingSection = () => {
             </p>
           </div>
           
-          <Button 
-            variant="ghost" 
-            className={cn(
-              "group mt-4 md:mt-0 self-start transition-all duration-700 delay-200",
-              isInView ? "opacity-100" : "opacity-0 translate-y-8"
-            )}
-          >
-            <span>View all experiences</span>
-            <ArrowRight className="ml-2 h-4 w-4 transition-transform group-hover:translate-x-1" />
-          </Button>
+          <Link to="/category/cat1">
+            <Button 
+              variant="ghost" 
+              className={cn(
+                "group mt-4 md:mt-0 self-start transition-all duration-700 delay-200",
+                isInView ? "opacity-100" : "opacity-0 translate-y-8"
+              )}
+            >
+              <span>View all experiences</span>
+              <ArrowRight className="ml-2 h-4 w-4 transition-transform group-hover:translate-x-1" />
+            </Button>
+          </Link>
         </div>
 
         <div 
