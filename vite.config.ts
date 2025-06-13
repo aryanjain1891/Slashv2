@@ -4,6 +4,9 @@ import path from "path";
 import { componentTagger } from "lovable-tagger";
 
 // https://vitejs.dev/config/
+import { defineConfig } from 'vite';
+import react from '@vitejs/plugin-react';
+
 export default defineConfig(({ mode }) => {
   // Debug log environment variables
   console.log('Vite mode:', mode);
@@ -11,6 +14,12 @@ export default defineConfig(({ mode }) => {
     SUPABASE_URL: process.env.VITE_SUPABASE_URL,
     SUPABASE_KEY: process.env.VITE_SUPABASE_KEY ? 'exists' : 'missing'
   });
+
+  return {
+    base: './', // ✅ ADD THIS LINE
+    plugins: [react()]
+  };
+});
   
   return {
     server: {
